@@ -24,23 +24,12 @@ module.exports = db => {
                 res.sendStatus(500);
             }
             if (queryResult.rowCount >= 1) {
+                console.log(queryResult)
                 console.log("User created successfully");
-                // Hashing Current Session Cookie
-                let currentSessionCookie = sha256(
-                    queryResult.rows[0].user_id + "logged_id" + SALT
-                );
-                // drop cookies to indicate user's logged in status and username
-                res.cookie("loggedIn", currentSessionCookie);
-                res.cookie("user_id", queryResult.rows[0].user_id);
                 // redirect to home page after creation
-                res.redirect("/");
+                res.send("success")
             } else {
                 console.log("User could not be created");
-                // Adding a prop to display a message when User ID is same
-                res.render("users/CreateUser", {
-                    message: "this userid has been taken",
-                    cookies: req.cookies
-                });
             }
         });
     };

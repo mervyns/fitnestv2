@@ -9,17 +9,16 @@ const moment = require("moment");
 module.exports = dbPoolInstance => {
     const createUser = (user, callback) => {
         // run user input password through bcrypt to obtain hashed password
-
-        var hashedValue = sha256(user.password);
-
         // set up query
         // UPDATING QUERYSTRING to reject duplicate name entries
+        console.log(user)
+        const hashedPass = sha256(user.password)
         const queryString =
-            "INSERT INTO users (user_name, email, password) SELECT ($1), ($2), ($3),  WHERE NOT EXISTS (SELECT * FROM users WHERE email=($4)) RETURNING *";
+            "INSERT INTO users (user_name, email, password) SELECT ($1), ($2), ($3) WHERE NOT EXISTS (SELECT * FROM users WHERE email=($4))";
         const values = [
             user.name,
             user.email,
-            hashedValue,
+            hashedPass,
             user.email
         ];
 

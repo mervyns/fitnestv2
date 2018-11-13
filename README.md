@@ -1,44 +1,16 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Fitnest
+### [Fitnest - Web App Link](https://fitnest.herokuapp.com/)
+ Fitnest allows users to create fitness activities such as Bootcamps or HIIT trainings, plan fitness programmes for these activities, and invite other users to join their activities. Users will also be able to browse the various activities happening around them.
 
-## Available Scripts
+## User Stories
+- As a User, I want to be able to create an activity and input a activity name, date, time, and location.
+- As a User, I want to be able to plan the activities with a fitness plan that includes the exercises which I want to do for the particular activity. I also want to be able to limit the ability to view the exercises.
+- As a User, I want to be able to browse fitness activities and join the activities.
+- As the creator of the event, I want to be able to keep track of the attendees and the overall attendance of the event.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project built with the following
+- React
+- Redux
+- Materialize CSS
+- Backend done using Express
+- Database on PostgreSQL
